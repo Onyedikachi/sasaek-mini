@@ -17,9 +17,10 @@ import AppIcon from '../../assets/images/app-icon.svg';
 import DownloadIcon from '../../assets/images/download.svg';
 
 
-
-import { CloudDownloadOutlined, DownloadOutlined, DownOutlined, RightOutlined } from '@ant-design/icons';
+import { DownOutlined, RightOutlined } from '@ant-design/icons';
 import { Dropdown } from 'antd';
+import Slider from '../../components/Slider';
+import Carousel from '../../components/Carousel';
 
 const HeaderSection = () => {
 
@@ -286,6 +287,13 @@ const AppSection = () => {
     </div>
   )
 }
+const AppSection2 = () => {
+  return (
+    <div className='w-full px-40'>
+      <Carousel />
+    </div>
+  )
+}
 
 const Home = () => {
   return (
@@ -296,6 +304,7 @@ const Home = () => {
       <ActivitiesSection />
       <DonationSection />
       <AppSection />
+      <AppSection2 />
     </>
   )
 }
