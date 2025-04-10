@@ -1,6 +1,12 @@
 @import "tailwindcss";
+@import "@fontsource/pretendard"; 
+@import "@fontsource/pretendard/400.css"; 
+@import "@fontsource/pretendard/600.css"; 
+@import "@fontsource/pretendard/700.css"; 
+
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Pretendard",system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -12,10 +18,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html,#root {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }
