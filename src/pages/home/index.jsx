@@ -5,10 +5,11 @@ import BookImage from '../../assets/images/book-image.png';
 import HeroImage from '../../assets/images/hero-image.jpg';
 
 import Chairman1 from '../../assets/images/chairman-1.png';
-
 import Chairman2 from '../../assets/images/chairman-2.png';
 import Chairman3 from '../../assets/images/chairman-3.png';
 import Signature from '../../assets/images/signature.png';
+import Activities from '../../assets/images/activities.png';
+
 
 
 import { DownOutlined, RightOutlined } from '@ant-design/icons';
@@ -182,12 +183,25 @@ const ChairmanSection = () => {
   )
 }
 
+const ActivitiesSection = () => {
+
+  return (
+    <div className='w-full flex items-center justify-center py-16'>
+      <img 
+        src={Activities} alt='activities'
+        className=' object-contain '
+      />
+    </div>
+  )
+}
+
 const Home = () => {
   return (
     <>
       <HeaderSection />
       <CultureSection />
       <ChairmanSection />
+      <ActivitiesSection />
     </>
   )
 }
