@@ -61,12 +61,12 @@ const HeaderSection = () => {
     },
   ];
   return (
-    <div className=' w-full h-full px-[3.75rem] py-11'>
+    <div className=' w-full h-full  lg:px-[3.75rem] px-3 py-3 lg:py-11'>
       <div className='flex justify-between  '>
         <div>
-          <img src={logo} className='h-11' alt='logo' />
+          <img src={logo} className='h-6 lg:h-11' alt='logo' />
         </div>
-        <div className='flex gap-6 text-xl font-semibold items-center'>
+        <div className='hidden lg:flex gap-6 text-xl font-semibold items-center '>
           <a href="/#" className='text-[#8C5947]'>소개</a>
           <a href="/#">소소담담 APP</a>
           <a href="/#">활동</a>
@@ -79,7 +79,7 @@ const HeaderSection = () => {
           </Dropdown>
         </div>
       </div>
-      <div className='w-full h-[53.125rem] pt-11 '>
+      <div className='w-full lg:h-[53.125rem] pt-5 lg:pt-11 '>
         <img className='w-full h-max rounded-3xl'
           src={HeroImage}
           // src='https://res.cloudinary.com/noi/image/upload/f_auto,q_auto/pwebcfhpc8v2mokypv1z'
@@ -92,14 +92,14 @@ const HeaderSection = () => {
 
 const CultureSection = () => {
   return (
-    <div className='w-full flex flex-col items-center justify-center text-center gap-6 py-24'>
-      <div className='text-7xl font-bold flex flex-col items-center justify-center gap-3 '>
+    <div className='w-full flex flex-col items-center justify-center text-center gap-6 py-6 lg:py-24 font-pretendard'>
+      <div className='text-3xl lg:text-7xl font-bold flex flex-col items-center justify-center gap-3 '>
         <div>
           <span>새로운 문화 나눔을 만들어갑니다.</span>
         </div>
-        <div className='flex gap-2 items-center'>
+        <div className='flex gap-4 items-center'>
           <span>우리는</span>
-          <img src={BookImage} alt='book' className='h-[5.875rem] w-[17.5rem] rounded-[6.25rem]' />
+          <img src={BookImage} alt='book' className='lg:h-[5.875rem] w-[5.4rem] lg:w-[17.5rem] rounded-[6.25rem]' />
         </div>
         <div>
           <span>
@@ -107,7 +107,7 @@ const CultureSection = () => {
           </span>
         </div>
       </div>
-      <div className='w-[70ch] font-normal text-[1.25rem]'>
+      <div className=' w-[50ch] lg:w-[60ch] font-normal text-[0.75rem] lg:text-[1.25rem]'>
         <span className=''>
           사색의향기는 문학인들의 커뮤니티로서 “행복한 문화 나눔"을 통한 사회 공헌과 선진적이고
           건전한 사회 문화를 만들어나가기 위해 노력하는 비영리 단체입니다.
@@ -122,11 +122,11 @@ const ChairmanSection = () => {
   return (
     <div className='w-full'>
       <div className='grid grid-cols-12'>
-        <div className='col-span-8 text-left flex flex-col gap-2 pl-40'>
-          <span className='text-bold text-6xl text-[#111111] font-gowun-batang'>
+        <div className='col-span-6 lg:col-span-8 text-left flex flex-col gap-1 lg:gap-2 pl-3 lg:pl-40'>
+          <span className='text-bold text-2xl lg:text-6xl text-[#111111] font-gowun-batang'>
             이사장 인사말.
           </span>
-          <div className='text-[#4C4C4C] text-xl flex flex-col gap-1 pt-6'>
+          <div className=' text-[0.625rem] lg:text-xl flex flex-col gap-1 pt-3 lg:pt-6'>
             <span>안녕하세요, 사색의향기 이사장 오덕균 입니다.</span>
             <span>사색의향기는 ‘행복한 문화 나눔’을 통해 더 나은 사회를 만들어가고자
               노력해왔습니다. 앞으로도 문학과 인문학의 가치를 공유하며, 열린 커뮤니티로서 함께 성장하겠습니다.</span>
@@ -135,35 +135,35 @@ const ChairmanSection = () => {
             </span>
           </div>
           <div className='flex gap-2 items-center'>
-            <span className='text-[#111111] font-gowun-batang'>
+            <span className='text-[#111111] text-[0.6rem] lg:text-2xl font-gowun-batang'>
               사단법인 사색의향기  이사장 오덕균
             </span>
             <img
               src={Signature} alt='signature'
-              className='h-[4.9375rem] w-[11.6875rem]'
+              className='h-[2.5rem] lg:h-[4.9375rem] w-[5.5rem] lg:w-[11.6875rem]'
             />
           </div>
           <div>
-            <button className=' cursor-pointer inline-flex gap-1.5 items-center font-[500] text-[1.125rem]'>
+            <button className=' cursor-pointer inline-flex gap-1.5 items-center font-[500] text-[0.625rem] lg:text-[1.125rem]'>
               <span>인터뷰 더 보기</span>
               <RightOutlined size={4} />
             </button>
           </div>
         </div>
-        <div className='col-span-4 flex flex-col gap-2 pl10 relative items-end justify-end'>
+        <div className='col-span-6 lg:col-span-4 flex flex-col gap-2 pl-10 relative items-end justify-end'>
           <div className='h-[75%] w-full bg-[#D0DEF0] rounded-l-full'>
           </div>
           <img
             src={Chairman1} alt='person 1'
-            className='absolute left-[16%] w-[16.875rem] h-[90%] mb-0.5  object-contain scale-x-[-1]'
+            className='absolute left-[32%] lg:left-[16%] w-[9.875rem] lg:w-[16.875rem] lg:h-[90%] mb-0.5  object-contain scale-x-[-1]'
           />
         </div>
       </div>
-      <div className='flex pt-22 gap-6 text-2xl font-bold w-full items-center justify-center'>
+      <div className='flex flex-wrap lg:flex-nowrap pt-6 lg:pt-22 gap-6 text-sm lg:text-2xl font-bold w-full items-center justify-center'>
         <div className='flex flex-col gap-2 items-center justify-center'>
           <img
             src={Chairman1} alt='person 1'
-            className=' rounded-full w-[16.875rem] h-[16.875rem] pt-9 bg-contain bg-[#BBBBBB]'
+            className=' rounded-full w-[8.4375rem] h-[8.4375rem] lg:w-[16.875rem] lg:h-[16.875rem] lg:pt-9 bg-contain bg-[#BBBBBB]'
           />
           <span>
             오덕균 이사장
@@ -172,7 +172,7 @@ const ChairmanSection = () => {
         <div className='flex flex-col gap-2 items-center justify-center'>
           <img
             src={Chairman2} alt='person 2'
-            className=' rounded-full w-[16.875rem] h-[16.875rem] object-scale-down bg-[#BBBBBB]'
+            className=' rounded-full w-[8.4375rem] h-[8.4375rem] lg:w-[16.875rem] lg:h-[16.875rem] object-scale-down bg-[#BBBBBB]'
           />
           <span>
             정준호 이사
@@ -181,7 +181,7 @@ const ChairmanSection = () => {
         <div className='flex flex-col gap-8 items-center justify-center'>
           <img
             src={Chairman3} alt='person 3'
-            className=' rounded-full w-[16.875rem] h-[16.875rem] pt-9   object-contain scale-x-[-1]   bg-[#BBBBBB]'
+            className=' rounded-full w-[8.4375rem] h-[8.4375rem] lg:w-[16.875rem] lg:h-[16.875rem] pt-9   object-contain scale-x-[-1]   bg-[#BBBBBB]'
           />
           <span>
             권혁준 고문
@@ -195,7 +195,7 @@ const ChairmanSection = () => {
 const ActivitiesSection = () => {
 
   return (
-    <div className='w-full flex items-center justify-center py-16'>
+    <div className='w-full flex items-center justify-center py-3 lg:py-16'>
       <img
         src={Activities} alt='activities'
         className=' object-contain '
@@ -206,9 +206,9 @@ const ActivitiesSection = () => {
 
 const DonationSection = () => {
   return (
-    <div className='w-full flex flex-col gap-3  justify-center items-center text-center py-11 bg-[#F8F4F3]'>
+    <div className='w-full flex flex-col gap-3  justify-center items-center text-center py-6 lg:py-11 bg-[#F8F4F3]'>
       <div>
-        <span className=' text-[2.5rem]  font-gowun-batang font-bold'>
+        <span className=' text-base lg:text-[2.5rem]  font-gowun-batang font-bold'>
           기부를 통해 따뜻한 마음을 보내고 싶다면,
         </span>
       </div>
@@ -216,13 +216,13 @@ const DonationSection = () => {
         <span>후원계좌 안내</span>
         <span>국민 924501-01-351204 / 사단법인 사색의향기</span>
       </div>
-      <div className='flex gap-2 text-lg'>
+      <div className='flex gap-2 text-xs lg:text-lg'>
         <button
           className='inline-flex items-center gap-2 h-full px-3.5 py-1 border-[#111111] border-[1px] rounded-l-full rounded-r-full'
         >
           <img
             src={HeartIcon} alt='Heart Icon'
-            className=' w-6 h-6'
+            className='w-3 h-3 lg:w-6 lg:h-6'
           />
           <span className=' font-pretendard font-[500]'>정기 후원</span>
         </button>
