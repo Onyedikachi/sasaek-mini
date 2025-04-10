@@ -9,13 +9,16 @@ import Chairman2 from '../../assets/images/chairman-2.png';
 import Chairman3 from '../../assets/images/chairman-3.png';
 import Signature from '../../assets/images/signature.png';
 import Activities from '../../assets/images/activities.png';
+import AppScreenShot from '../../assets/images/app-screenshot.png';
+
 
 import HeartIcon from '../../assets/images/heart.svg';
+import AppIcon from '../../assets/images/app-icon.svg';
+import DownloadIcon from '../../assets/images/download.svg';
 
 
 
-
-import { DownOutlined, RightOutlined } from '@ant-design/icons';
+import { CloudDownloadOutlined, DownloadOutlined, DownOutlined, RightOutlined } from '@ant-design/icons';
 import { Dropdown } from 'antd';
 
 const HeaderSection = () => {
@@ -190,7 +193,7 @@ const ActivitiesSection = () => {
 
   return (
     <div className='w-full flex items-center justify-center py-16'>
-      <img 
+      <img
         src={Activities} alt='activities'
         className=' object-contain '
       />
@@ -203,7 +206,7 @@ const DonationSection = () => {
     <div className='w-full flex flex-col gap-3  justify-center items-center text-center py-11 bg-[#F8F4F3]'>
       <div>
         <span className=' text-[2.5rem]  font-gowun-batang font-bold'>
-        기부를 통해 따뜻한 마음을 보내고 싶다면,
+          기부를 통해 따뜻한 마음을 보내고 싶다면,
         </span>
       </div>
       <div className='flex flex-col gap-1 font-gowun-batang font-bold'>
@@ -211,11 +214,11 @@ const DonationSection = () => {
         <span>국민 924501-01-351204 / 사단법인 사색의향기</span>
       </div>
       <div className='flex gap-2 text-lg'>
-        <button 
+        <button
           className='inline-flex items-center gap-2 h-full px-3.5 py-1 border-[#111111] border-[1px] rounded-l-full rounded-r-full'
         >
-          <img 
-            src={HeartIcon} alt='Heart Icon' 
+          <img
+            src={HeartIcon} alt='Heart Icon'
             className=' w-6 h-6'
           />
           <span className=' font-pretendard font-[500]'>정기 후원</span>
@@ -231,6 +234,59 @@ const DonationSection = () => {
   )
 }
 
+const AppSection = () => {
+  return (
+    <div className='w-full px-36'>
+      <div className='w-full grid grid-cols-12 px-4 py-32'>
+        <div className='col-span-6 flex flex-col gap-8'>
+          <div className='w-full flex flex-col gap-4'>
+            <img src={AppIcon} alt='app icon' className='w-24 h-24' />
+            <div className='w-[15ch] font-gowun-batang font-bold text-6xl text-left'>
+              <span>더 나은 세상을
+                만들어 가기 위한 노력.</span>
+            </div>
+
+          </div>
+          <div className='w-full flex flex-col gap-2 text-lg text-[#4C4C4C] font-pretendard'>
+            <span>
+              바른 인성과 성품을 고양하며 함께 나누는 활동을 통해 세대와 나라를 초월한 커뮤니티를 만들어나가려고 노력하고 있습니다.
+              작은 담소와 삶의 지혜가 필요하신 모든 분들을 환영합니다.
+            </span>
+            <span>
+              삶의 어려운 고충이 있으신 분들에게 작은 도움을 드립니다. 법률적이거나 개인적으로 해결하기 어려운 문제들이 있으시다면 소담 서포터즈에게 도움을 요청해주세요.
+            </span>
+          </div>
+          <div className='text-xl flex gap-2 font-bold font-gowun-batang'>
+            <span>
+              2025. 6. 출시 예정
+            </span>
+            <span className='text-[#8C5947]'>
+              커뮤니티 APP ‘소소담담’
+            </span>
+          </div>
+          <div className='font-pretendard'>
+            <button className=' border-[1px] rounded-r-full rounded-l-full px-3.5 py-1 border-[#111111] cursor-pointer inline-flex gap-1.5 items-center font-[500] text-[1.125rem]'>
+              <span>인터뷰 더 보기</span>
+              <img 
+                src={DownloadIcon} alt='download icon'
+                className=' w-6 h-6'
+              /> 
+            </button>
+          </div>
+          <div></div>
+        </div>
+        <div className='col-span-6 flex justify-end'>
+           <img 
+              src={AppScreenShot} alt='app screenshot'
+              className='h-full max-h-[35rem]'
+           />
+        </div>
+      </div>
+
+    </div>
+  )
+}
+
 const Home = () => {
   return (
     <>
@@ -239,6 +295,7 @@ const Home = () => {
       <ChairmanSection />
       <ActivitiesSection />
       <DonationSection />
+      <AppSection />
     </>
   )
 }
