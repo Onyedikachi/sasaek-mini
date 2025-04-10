@@ -103,62 +103,62 @@ export default function Carousel() {
                     {/*    <!-- Slides --> */}
                     <div className="overflow-hidden" data-glide-el="track">
                         <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0 font-pretendard ">
-                            <li className="w-[19.25rem] h-[20.625rem] flex flex-col justify-between pt-10">
+                            <li className="w-[9rem] lg:w-[19.25rem] h-[10.5rem] lg:h-[20.625rem] flex flex-col justify-between pt-4 lg:pt-10">
                                 <img
                                     src={AppOne}
                                     alt="app one"
-                                    className="w-20 mx-auto"
+                                    className="w-15 lg:w-20 mx-auto"
                                 />
                                 <span className="flex flex-col text-center">
-                                    <span className=" font-semibold text-2xl">
+                                    <span className=" font-semibold text-sm lg:text-2xl">
                                         (주)행복한사람들
                                     </span>
-                                    <span className="text-lg font-normal">
+                                    <span className="text-xs lg:text-lg font-normal">
                                         행복한 날, 행복한 사람들과 함께하는 특별한 날을 선사합니다.
                                     </span>
                                 </span>
                             </li>
-                            <li className="w-[19.25rem] h-[20.625rem] flex flex-col justify-between">
+                            <li className="w-[9rem] lg:w-[19.25rem] h-[10.5rem] lg:h-[20.625rem] flex flex-col justify-between">
                                 <img
                                     src={AppTwo}
                                     alt="app two"
-                                    className="m-auto w-[6.5rem]"
+                                    className="m-auto w-[4rem] lg:w-[6.5rem]"
                                 />
                                 <span className="flex flex-col text-center">
-                                    <span className=" font-semibold text-2xl">
+                                    <span className=" font-semibold text-sm lg:text-2xl">
                                         바른댓글 실천연대
                                     </span>
-                                    <span className="text-lg font-normal">
+                                    <span className="text-xs lg:text-lg font-normal">
                                         바른댓글 정착으로 아름다운 사회를 만들어갑니다.
                                     </span>
                                 </span>
                             </li>
-                            <li className="w-[19.25rem] h-[20.625rem] flex flex-col justify-between">
+                            <li className="w-[9rem] lg:w-[19.25rem] h-[10.5rem] lg:h-[20.625rem] flex flex-col justify-between">
                                 <img
                                     src={AppThree}
                                     alt="app three"
-                                    className="m-auto w-40"
+                                    className="m-auto w-30 lg:w-40"
                                 />
                                 <span className="flex flex-col text-center">
-                                    <span className=" font-semibold text-2xl">
+                                    <span className=" font-semibold text-sm lg:text-2xl">
                                         아트리안
                                     </span>
-                                    <span className="text-lg font-normal">
+                                    <span className="text-xs lg:text-lg font-normal">
                                         생활미술시장의 뉴 패러다임을 제안하는 상설 아트갤러리 프로젝트.
                                     </span>
                                 </span>
                             </li>
-                            <li className="w-[19.25rem] h-[20.625rem] flex flex-col justify-between">
+                            <li className="w-[9rem] lg:w-[19.25rem] h-[10.5rem] lg:h-[20.625rem] flex flex-col justify-between">
                                 <img
                                     src={AppFour}
                                     alt="app four"
-                                    className="m-auto w-[13.75rem]"
+                                    className="m-auto w-[8rem] lg:w-[13.75rem]"
                                 />
                                 <span className="flex flex-col text-center">
-                                    <span className=" font-semibold text-2xl">
+                                    <span className=" font-semibold text-sm lg:text-2xl">
                                         대한민국위멘위원회
                                     </span>
-                                    <span className="text-lg font-normal">
+                                    <span className="text-xs lg:text-lg font-normal">
                                         어린이를 위한 위대한 멘토, 위멘이
                                         함께 합니다.
                                     </span>

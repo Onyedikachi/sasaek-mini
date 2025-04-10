@@ -298,9 +298,9 @@ const AppSection2 = () => {
 }
 const Footer = () => {
   return (
-    <div className='w-full px-40 bg-[#222222] py-20'>
+    <div className='w-full px-6 lg:px-40 bg-[#222222] py-6 lg:py-20'>
       <div className='grid grid-cols-12'>
-        <div className='col-span-8 flex flex-col gap-4 pr-3'>
+        <div className='col-span-12 lg:col-span-8 flex flex-col gap-4 pr-3'>
           <div>
             <img
               src={LogoWhite} alt='logo'
@@ -343,7 +343,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className='col-span-4 text-white flex flex-col gap-8'>
+        <div className='col-span-12 lg:col-span-4 text-white flex flex-col gap-8'>
           <div className='flex flex-col gap-3 text-left w-full'>
             <span className='font-semibold text-2xl'>뉴스레터 구독하기</span>
             <span className='text-base font-normal'>이메일 구독을 통해 사색의향기의 최신 소식과 교육 및 이벤트 소식을
