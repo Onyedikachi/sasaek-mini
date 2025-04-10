@@ -239,18 +239,18 @@ const DonationSection = () => {
 
 const AppSection = () => {
   return (
-    <div className='w-full px-36'>
-      <div className='w-full grid grid-cols-12 px-4 py-32'>
-        <div className='col-span-6 flex flex-col gap-8'>
-          <div className='w-full flex flex-col gap-4'>
-            <img src={AppIcon} alt='app icon' className='w-24 h-24' />
-            <div className='w-[15ch] font-gowun-batang font-bold text-6xl text-left'>
+    <div className='w-full px-3 lg:px-36'>
+      <div className='w-full grid grid-cols-12 px-3 lg:px-4 py-6 lg:py-32'>
+        <div className='col-span-12 lg:col-span-6 flex flex-col gap-4 lg:gap-8'>
+          <div className='w-full flex flex-col gap-2 lg:gap-4'>
+            <img src={AppIcon} alt='app icon' className='w-12 lg:w-24 h-12 lg:h-24' />
+            <div className='w-[15ch] font-gowun-batang font-bold text-2xl lg:text-6xl text-left'>
               <span>더 나은 세상을
                 만들어 가기 위한 노력.</span>
             </div>
 
           </div>
-          <div className='w-full flex flex-col gap-2 text-lg text-[#4C4C4C] text-left font-pretendard'>
+          <div className='w-full flex flex-col gap-2 text-sm lg:text-lg text-[#4C4C4C] text-left font-pretendard'>
             <span>
               바른 인성과 성품을 고양하며 함께 나누는 활동을 통해 세대와 나라를 초월한 커뮤니티를 만들어나가려고 노력하고 있습니다.
               작은 담소와 삶의 지혜가 필요하신 모든 분들을 환영합니다.
@@ -259,7 +259,7 @@ const AppSection = () => {
               삶의 어려운 고충이 있으신 분들에게 작은 도움을 드립니다. 법률적이거나 개인적으로 해결하기 어려운 문제들이 있으시다면 소담 서포터즈에게 도움을 요청해주세요.
             </span>
           </div>
-          <div className='text-xl flex gap-2 font-bold font-gowun-batang'>
+          <div className=' text-xs lg:text-xl flex gap-2 font-bold font-gowun-batang'>
             <span>
               2025. 6. 출시 예정
             </span>
@@ -268,17 +268,17 @@ const AppSection = () => {
             </span>
           </div>
           <div className='font-pretendard'>
-            <button className=' border-[1px] rounded-r-full rounded-l-full px-3.5 py-1 border-[#111111] cursor-pointer inline-flex gap-1.5 items-center font-[500] text-[1.125rem]'>
+            <button className=' border-[1px] rounded-r-full rounded-l-full px-3.5 py-1 border-[#111111] cursor-pointer inline-flex gap-1.5 items-center font-[500] text-sm lg:text-[1.125rem]'>
               <span>인터뷰 더 보기</span>
               <img
                 src={DownloadIcon} alt='download icon'
-                className=' w-6 h-6'
+                className='w-4 h-4  lg:w-6 lg:h-6'
               />
             </button>
           </div>
           <div></div>
         </div>
-        <div className='col-span-6 flex justify-end'>
+        <div className='col-span-12 lg:col-span-6 flex justify-center lg:justify-end'>
           <img
             src={AppScreenShot} alt='app screenshot'
             className='h-full max-h-[35rem]'
@@ -291,7 +291,7 @@ const AppSection = () => {
 }
 const AppSection2 = () => {
   return (
-    <div className='w-full px-40'>
+    <div className='w-full px-3 lg:px-40'>
       <Carousel />
     </div>
   )

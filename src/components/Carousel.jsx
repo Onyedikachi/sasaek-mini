@@ -39,21 +39,21 @@ export default function Carousel() {
     return (
         <>
             {/*<!-- Component: Carousel with controls outside --> */}
-            <div className="w-full grid grid-cols-12 glide-05 pb-32">
+            <div className="w-full grid grid-cols-12 glide-05 pb-3 lg:pb-32">
                 {/*    <!-- Controls --> */}
-                <div className="col-span-3 flex flex-col justify-between pt-10">
-                    <div className="font-gowun-batang font-bold text-6xl text-left">
+                <div className="col-span-12 lg:col-span-3 flex flex-col lg:justify-between items-center pt-3 lg:pt-10">
+                    <div className="font-gowun-batang font-bold text-3xl lg:text-6xl text-left">
                         <span>
                             함께하는
                             이들
                         </span>
                     </div>
                     <div
-                        className="flex w-full items-center justify-left gap-2 p-4"
+                        className="flex w-full items-center justify-center lg:justify-left gap-2 p-2 lg:p-4"
                         data-glide-el="controls"
-                    >
+                    >   
                         <button
-                            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-[#111111] text-white transition duration-300 hover:border-slate-900 hover:bg-white hover:text-[#111111] focus-visible:outline-none lg:h-12 lg:w-12"
+                            className="inline-flex h-8 w-8 lg:h-12 lg:w-12 items-center justify-center rounded-full border border-slate-700 bg-[#111111] text-white transition duration-300 hover:border-slate-900 hover:bg-white hover:text-[#111111] focus-visible:outline-none "
                             data-glide-dir="<"
                             aria-label="prev slide"
                         >
@@ -63,7 +63,7 @@ export default function Carousel() {
                                 viewBox="0 0 24 24"
                                 strokeWidth="1.5"
                                 stroke="currentColor"
-                                className="h-5 w-5"
+                                className="h-3 lg:h-5 w-3 lg:w-5 "
                             >
                                 <title>prev slide</title>
                                 <path
@@ -74,7 +74,7 @@ export default function Carousel() {
                             </svg>
                         </button>
                         <button
-                            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-[#111111] text-white transition duration-300 hover:border-slate-900 hover:bg-white hover:text-[#111111] focus-visible:outline-none lg:h-12 lg:w-12"
+                            className="inline-flex h-8 w-8 lg:h-12 lg:w-12 items-center justify-center rounded-full border border-slate-700 bg-[#111111] text-white transition duration-300 hover:border-slate-900 hover:bg-white hover:text-[#111111] focus-visible:outline-none"
                             data-glide-dir=">"
                             aria-label="next slide"
                         >
@@ -84,7 +84,8 @@ export default function Carousel() {
                                 viewBox="0 0 24 24"
                                 strokeWidth="1.5"
                                 stroke="currentColor"
-                                className="h-5 w-5"
+                                className="h-3 lg:h-5 w-3 lg:w-5 "
+
                             >
                                 <title>next slide</title>
                                 <path
@@ -98,7 +99,7 @@ export default function Carousel() {
 
                 </div>
 
-                <div className="col-span-9 relative w-full">
+                <div className=" col-span-12 lg:col-span-9 relative w-full">
                     {/*    <!-- Slides --> */}
                     <div className="overflow-hidden" data-glide-el="track">
                         <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0 font-pretendard ">
