@@ -10,6 +10,9 @@ import Chairman3 from '../../assets/images/chairman-3.png';
 import Signature from '../../assets/images/signature.png';
 import Activities from '../../assets/images/activities.png';
 
+import HeartIcon from '../../assets/images/heart.svg';
+
+
 
 
 import { DownOutlined, RightOutlined } from '@ant-design/icons';
@@ -195,6 +198,39 @@ const ActivitiesSection = () => {
   )
 }
 
+const DonationSection = () => {
+  return (
+    <div className='w-full flex flex-col gap-3  justify-center items-center text-center py-11 bg-[#F8F4F3]'>
+      <div>
+        <span className=' text-[2.5rem]  font-gowun-batang font-bold'>
+        기부를 통해 따뜻한 마음을 보내고 싶다면,
+        </span>
+      </div>
+      <div className='flex flex-col gap-1 font-gowun-batang font-bold'>
+        <span>후원계좌 안내</span>
+        <span>국민 924501-01-351204 / 사단법인 사색의향기</span>
+      </div>
+      <div className='flex gap-2 text-lg'>
+        <button 
+          className='inline-flex items-center gap-2 h-full px-3.5 py-1 border-[#111111] border-[1px] rounded-l-full rounded-r-full'
+        >
+          <img 
+            src={HeartIcon} alt='Heart Icon' 
+            className=' w-6 h-6'
+          />
+          <span className=' font-pretendard font-[500]'>정기 후원</span>
+        </button>
+        <button
+          className='inline-flex items-center gap-2 h-full px-3.5 py-1 border-[#111111] border-[1px] rounded-l-full rounded-r-full'
+        >
+          <span className='font-pretendard font-[500]'>일시 후원</span>
+        </button>
+
+      </div>
+    </div>
+  )
+}
+
 const Home = () => {
   return (
     <>
@@ -202,6 +238,7 @@ const Home = () => {
       <CultureSection />
       <ChairmanSection />
       <ActivitiesSection />
+      <DonationSection />
     </>
   )
 }
