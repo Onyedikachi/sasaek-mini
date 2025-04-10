@@ -300,14 +300,14 @@ const Footer = () => {
   return (
     <div className='w-full px-6 lg:px-40 bg-[#222222] py-6 lg:py-20'>
       <div className='grid grid-cols-12'>
-        <div className='col-span-12 lg:col-span-8 flex flex-col gap-4 pr-3'>
+        <div className='col-span-12 lg:col-span-8 flex flex-col items-center lg:items-start gap-4 lg:pr-3'>
           <div>
             <img
               src={LogoWhite} alt='logo'
-              className='w-[14.375rem]'
+              className='w-[8rem] lg:w-[14.375rem]'
             />
           </div>
-          <div className='flex flex-col gap-6'>
+          <div className='flex flex-col gap-6 justify-center'>
             <div className='text-base font-pretendard font-semibold text-white flex flex-wrap gap-4'>
               <span className='shrink-0'>개인정보 처리방침</span>
               <span className='shrink-0'>이용약관</span>
@@ -343,14 +343,14 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className='col-span-12 lg:col-span-4 text-white flex flex-col gap-8'>
+        <div className='col-span-12 py-6 lg:pt-0 lg:col-span-4 text-white flex flex-col gap-8'>
           <div className='flex flex-col gap-3 text-left w-full'>
-            <span className='font-semibold text-2xl'>뉴스레터 구독하기</span>
-            <span className='text-base font-normal'>이메일 구독을 통해 사색의향기의 최신 소식과 교육 및 이벤트 소식을
+            <span className='font-semibold text-lg lg:text-2xl'>뉴스레터 구독하기</span>
+            <span className='text-xs lg:text-base font-normal'>이메일 구독을 통해 사색의향기의 최신 소식과 교육 및 이벤트 소식을
               빠르게 받아보실 수 있습니다.</span>
           </div>
           <div className='w-full'>
-            <button className=' cursor-pointer inline-flex justify-between items-center font-[500] text-lg text-white border-white border-2 rounded-r-full rounded-l-full px-4 py-2  w-full'>
+            <button className=' cursor-pointer inline-flex justify-between items-center font-[500] text-xs lg:text-base text-white border-white border-2 rounded-r-full rounded-l-full px-4 py-2  w-full'>
               <span>이메일 구독신청</span>
               <ArrowRightOutlined size={4} />
             </button>
