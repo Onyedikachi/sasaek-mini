@@ -1,6 +1,8 @@
 import React from 'react'
 
 import logo from '../../assets/images/logo.svg';
+import LogoWhite from '../../assets/images/logo-white.svg';
+
 import BookImage from '../../assets/images/book-image.png';
 import HeroImage from '../../assets/images/hero-image.jpg';
 
@@ -17,7 +19,7 @@ import AppIcon from '../../assets/images/app-icon.svg';
 import DownloadIcon from '../../assets/images/download.svg';
 
 
-import { DownOutlined, RightOutlined } from '@ant-design/icons';
+import { ArrowRightOutlined, DownOutlined, RightOutlined } from '@ant-design/icons';
 import { Dropdown } from 'antd';
 import Slider from '../../components/Slider';
 import Carousel from '../../components/Carousel';
@@ -248,7 +250,7 @@ const AppSection = () => {
             </div>
 
           </div>
-          <div className='w-full flex flex-col gap-2 text-lg text-[#4C4C4C] font-pretendard'>
+          <div className='w-full flex flex-col gap-2 text-lg text-[#4C4C4C] text-left font-pretendard'>
             <span>
               바른 인성과 성품을 고양하며 함께 나누는 활동을 통해 세대와 나라를 초월한 커뮤니티를 만들어나가려고 노력하고 있습니다.
               작은 담소와 삶의 지혜가 필요하신 모든 분들을 환영합니다.
@@ -268,19 +270,19 @@ const AppSection = () => {
           <div className='font-pretendard'>
             <button className=' border-[1px] rounded-r-full rounded-l-full px-3.5 py-1 border-[#111111] cursor-pointer inline-flex gap-1.5 items-center font-[500] text-[1.125rem]'>
               <span>인터뷰 더 보기</span>
-              <img 
+              <img
                 src={DownloadIcon} alt='download icon'
                 className=' w-6 h-6'
-              /> 
+              />
             </button>
           </div>
           <div></div>
         </div>
         <div className='col-span-6 flex justify-end'>
-           <img 
-              src={AppScreenShot} alt='app screenshot'
-              className='h-full max-h-[35rem]'
-           />
+          <img
+            src={AppScreenShot} alt='app screenshot'
+            className='h-full max-h-[35rem]'
+          />
         </div>
       </div>
 
@@ -291,6 +293,70 @@ const AppSection2 = () => {
   return (
     <div className='w-full px-40'>
       <Carousel />
+    </div>
+  )
+}
+const Footer = () => {
+  return (
+    <div className='w-full px-40 bg-[#222222] py-20'>
+      <div className='grid grid-cols-12'>
+        <div className='col-span-8 flex flex-col gap-4 pr-3'>
+          <div>
+            <img
+              src={LogoWhite} alt='logo'
+              className='w-[14.375rem]'
+            />
+          </div>
+          <div className='flex flex-col gap-6'>
+            <div className='text-base font-pretendard font-semibold text-white flex flex-wrap gap-4'>
+              <span className='shrink-0'>개인정보 처리방침</span>
+              <span className='shrink-0'>이용약관</span>
+              <span className='text-[#7C7C7C] font-normal shrink-0'>고객센터 평일 08:00~19:00 (주말 및 공휴일 휴무)</span>
+            </div>
+            <div className='flex flex-col gap-2 text-xs text-white'>
+              <div className='flex gap-5'>
+                <span>사단법인 사색의향기</span>
+                <span>
+                  <span className='text-[#7C7C7C]'>이사장</span>&nbsp;<span>오덕균</span>
+                </span>
+                <span>
+                  <span className='text-[#7C7C7C]'>고유번호</span>&nbsp;<span>355-82-00129</span>
+                </span>
+              </div>
+              <div className='flex gap-3 flex-wrap'>
+                <span className='shrink-0'>
+                  <span className='text-[#7C7C7C]'>주소</span>&nbsp;<span>서울시 강남구 테헤란로 19길 28 이림빌딩3층(역삼동)</span>
+                </span>
+                <span className='shrink-0'>
+                  <span className='text-[#7C7C7C]'>전화</span>&nbsp;<span>02-539-5101</span>
+                </span>
+                <span className='shrink-0'>
+                  <span className='text-[#7C7C7C]'>팩스</span>&nbsp;<span>070-8668-5091</span>
+                </span>
+                <span className='shrink-0'>
+                  <span className='text-[#7C7C7C]'>이메일</span>&nbsp;<span>culppy@culppy.com</span>
+                </span>
+              </div>
+              <div>
+                <span>Copyright ⓒ 2025 사색의향기. All Rights Reserved</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='col-span-4 text-white flex flex-col gap-8'>
+          <div className='flex flex-col gap-3 text-left w-full'>
+            <span className='font-semibold text-2xl'>뉴스레터 구독하기</span>
+            <span className='text-base font-normal'>이메일 구독을 통해 사색의향기의 최신 소식과 교육 및 이벤트 소식을
+              빠르게 받아보실 수 있습니다.</span>
+          </div>
+          <div className='w-full'>
+            <button className=' cursor-pointer inline-flex justify-between items-center font-[500] text-lg text-white border-white border-2 rounded-r-full rounded-l-full px-4 py-2  w-full'>
+              <span>이메일 구독신청</span>
+              <ArrowRightOutlined size={4} />
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
@@ -305,6 +371,7 @@ const Home = () => {
       <DonationSection />
       <AppSection />
       <AppSection2 />
+      <Footer />
     </>
   )
 }
