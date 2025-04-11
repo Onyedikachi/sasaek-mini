@@ -232,7 +232,7 @@ const ChairmanSection = () => {
           />
         </div>
       </div>
-      <div className='flex flex-wrap lg:flex-nowrap pt-6 lg:pt-22 gap-6 text-sm lg:text-2xl font-bold w-full items-center justify-center'>
+      <div className='flex flex-wrap lg:flex-nowrap pt-6 lg:pt-22 gap-6 lg:gap-[10rem] text-sm lg:text-2xl font-bold w-full items-center justify-center'>
         <div className='flex flex-col gap-2 items-center justify-center'>
           <img
             src={Chairman1} alt='person 1'
