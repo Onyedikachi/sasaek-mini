@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import logo from '../../assets/images/logo.svg';
 import LogoWhite from '../../assets/images/logo-white.svg';
 
 import BookImage from '../../assets/images/book-image.png';
-import HeroImage from '../../assets/images/hero-image.jpg';
 
 import Chairman1 from '../../assets/images/chairman-1.png';
 import Chairman2 from '../../assets/images/chairman-2.png';
@@ -26,6 +25,8 @@ import Carousel from '../../components/Carousel';
 
 const HeaderSection = () => {
 
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
   const items = [
     {
       key: '1',
@@ -42,8 +43,6 @@ const HeaderSection = () => {
           China
         </a>
       ),
-      // icon: <SmileOutlined />,
-      // disabled: true,
     },
     {
       key: '3',
@@ -52,11 +51,9 @@ const HeaderSection = () => {
           Japan
         </a>
       ),
-      // disabled: true,
     },
     {
       key: '4',
-      // danger: true,
       label: 'Taiwan',
     },
   ];
@@ -66,17 +63,97 @@ const HeaderSection = () => {
         <div>
           <img src={logo} className='h-6 lg:h-11' alt='logo' />
         </div>
-        <div className='hidden lg:flex gap-6 text-xl font-semibold items-center '>
-          <a href="/#" className='text-[#8C5947]'>소개</a>
-          <a href="/#">소소담담 APP</a>
-          <a href="/#">활동</a>
+        <div className='flex gap-6 text-xl font-semibold items-center '>
+          <nav>
+            <section className="MOBILE-MENU flex lg:hidden">
+              <button
+                className="HAMBURGER-ICON space-y-2 inline-flex flex-col mr-3"
+                onClick={() => setIsNavOpen((prev) => !prev)}
+              >
+                <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+                <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+                <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+              </button>
 
-          <Dropdown menu={{ items }} trigger={['click']}>
-            <button onClick={e => e.preventDefault()} className='bg-[#4C4C4C] flex items-center px-4 py-1.5 rounded-2xl text-sm text-white gap-2 uppercase'>
-              <span>Kor</span>
-              <DownOutlined size='10' />
-            </button>
-          </Dropdown>
+              <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
+                <button
+                  className="absolute top-0 right-0 px-8 py-8"
+                  onClick={() => setIsNavOpen(false)}
+                >
+                  <svg
+                    className="h-8 w-8 text-gray-600"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                </button>
+                <ul className="flex flex-col items-center justify-between min-h-[250px]">
+                  <li>
+                    <a href="/#" className='text-[#8C5947]'>소개</a>
+                  </li>
+                  <li>
+                    <a href="/#">소소담담 APP</a>
+                  </li>
+                  <li>
+                    <a href="/#">활동</a>
+                  </li>
+                  <li>
+                    <Dropdown menu={{ items }} trigger={['click']}>
+                      <button onClick={e => e.preventDefault()} className='bg-[#4C4C4C] flex items-center px-4 py-1.5 rounded-2xl text-sm text-white gap-2 uppercase'>
+                        <span>Kor</span>
+                        <DownOutlined size='10' />
+                      </button>
+                    </Dropdown>
+                  </li>
+                  </ul>
+              </div>
+            </section>
+
+            <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
+              <li>
+                <a href="/#" className='text-[#8C5947]'>소개</a>
+              </li>
+              <li>
+                <a href="/#">소소담담 APP</a>
+              </li>
+              <li>
+                <a href="/#">활동</a>
+              </li>
+              <li>
+                <Dropdown menu={{ items }} trigger={['click']}>
+                  <button onClick={e => e.preventDefault()} className='bg-[#4C4C4C] flex items-center px-4 py-1.5 rounded-2xl text-sm text-white gap-2 uppercase'>
+                    <span>Kor</span>
+                    <DownOutlined size='10' />
+                  </button>
+                </Dropdown>
+              </li>
+            </ul>
+          </nav>
+          <style>{`
+            .hideMenuNav {
+              display: none;
+            }
+            .showMenuNav {
+              display: block;
+              position: absolute;
+              width: 100%;
+              height: 100vh;
+              top: 0;
+              left: 0;
+              background: white;
+              z-index: 10;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
+              align-items: center;
+            }
+          `}</style>
         </div>
       </div>
       <div className='w-full h-full pt-5 lg:pt-11 '>
