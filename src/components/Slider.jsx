@@ -34,7 +34,7 @@ export default function Slider() {
           <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0 gap-4">
             <li className="relative">
               <div className="w-full bg-gradient-to-t  from-gray-300  to-gray-300  rounded-4xl ">
-                <img className='w-full max-w-full max-h-[12rem] lg:max-h-[35rem] xl:max-h-[36rem]  rounded-4xl  mix-blend-darken object-fill'
+                <img className='w-full max-w-full max-h-[12rem] lg:max-h-[35rem] xl:max-h-[36rem]  2xl:max-h-[56rem]  rounded-4xl  mix-blend-darken object-fill'
                   src={HeroImage}
                   alt='hero section'
                 />
