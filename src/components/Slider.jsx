@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import Glide from "@glidejs/glide"
 
-import HeroImage from '../assets/images/hero-image.jpg';
+import HeroImage from '../assets/images/hero-image.webp';
 import LineImage from '../assets/images/line.svg';
 
 export default function Slider() {
@@ -33,18 +33,18 @@ export default function Slider() {
         <div className="overflow-hidden" data-glide-el="track">
           <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0 gap-4">
             <li className="relative">
-              <div className="w-full bg-gradient-to-t  from-gray-300  to-gray-300  rounded-4xl ">
-                <img className='w-full max-w-full max-h-[12rem] lg:max-h-[35rem] xl:max-h-[36rem]  2xl:max-h-[56rem]  rounded-4xl  mix-blend-darken object-fill'
+              <div className="w-full ">
+                <img className='w-full max-w-full max-h-[12rem] lg:max-h-max xl:max-h-max  2xl:max-h-[56rem]  rounded-4xl  mix-blend-darken object-fill'
                   src={HeroImage}
                   alt='hero section'
                 />
               </div>
-              <span className="absolute  w-full flex flex-col text-white gap-2 lg:gap-6 text-center items-center justify-center font-gowun-batang font-bold top-1/3 lg:top-1/5 z-[100]">
+              <span className="absolute  w-full flex flex-col text-white gap-2 lg:gap-6 text-center items-center justify-center font-gowun-batang font-bold top-1/6 lg:top-1/5 z-[100]">
                 <span className="text-xs lg:text-[2rem]">특별한 나눔</span>
                 <span>
                   <img
                     src={LineImage} alt="line"
-                    className="w-6 lg:w-10"
+                    className="w-4 lg:w-10"
                   />
                 </span>
                 <span className="text-xl lg:text-7xl">
@@ -66,12 +66,12 @@ export default function Slider() {
         </div>
         {/*    <!-- Controls --> */}
         <div
-          className="absolute right-0 bottom-0 flex gap-4 items-center justify-between px-3 lg:px-6 py-2 bg-white  rounded-tl-2xl  "
+          className="absolute right-0 bottom-0 lg:bottom-6 2xl:bottom-16 flex gap-4 items-center justify-between px-3 lg:px-6 py-2 bg-none  rounded-tl-2xl  "
         >
           <div
             className="flex items-center justify-center w-full gap-3"
           >
-            <span className="">1</span>
+            <span className="2xl:text-3xl">1</span>
             <div
               className="flex items-center justify-center w-full gap-0"
               data-glide-el="controls[nav]"
@@ -91,7 +91,7 @@ export default function Slider() {
                 <span className="block h-[1px] w-4 transition-colors duration-300 rounded-full bg-gray-200  focus:outline-none"></span>
               </button>
             </div>
-            <span className="">2</span>
+            <span className="2xl:text-3xl">2</span>
           </div>
           <div className="flex gap-3"
             data-glide-el="controls"
