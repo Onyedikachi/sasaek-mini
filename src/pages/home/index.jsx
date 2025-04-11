@@ -79,12 +79,8 @@ const HeaderSection = () => {
           </Dropdown>
         </div>
       </div>
-      <div className='w-full lg:h-[53.125rem] pt-5 lg:pt-11 '>
-        <img className='w-full h-max rounded-3xl'
-          src={HeroImage}
-          // src='https://res.cloudinary.com/noi/image/upload/f_auto,q_auto/pwebcfhpc8v2mokypv1z'
-          alt='hero section'
-        />
+      <div className='w-full h-full pt-5 lg:pt-11 '>
+        <Slider />
       </div>
     </div>
   )
