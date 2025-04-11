@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import Glide from "@glidejs/glide"
 
 import HeroImage from '../assets/images/hero-image.jpg';
+import LineImage from '../assets/images/line.svg';
 
 export default function Slider() {
   useEffect(() => {
@@ -30,12 +31,29 @@ export default function Slider() {
       <div className="relative w-full glide-01">
         {/*    <!-- Slides --> */}
         <div className="overflow-hidden" data-glide-el="track">
-          <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
-            <li>
-              <img className='w-full max-w-full max-h-[12rem] lg:max-h-[35rem] xl:max-h-[36rem] m-auto rounded-4xl'
-                src={HeroImage}
-                alt='hero section'
-              />
+          <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0 gap-4">
+            <li className="relative">
+              <div className="w-full bg-gradient-to-t  from-slate-200  to-slate-200  rounded-4xl ">
+                <img className='w-full max-w-full max-h-[12rem] lg:max-h-[35rem] xl:max-h-[36rem]  rounded-4xl  mix-blend-darken'
+                  src={HeroImage}
+                  alt='hero section'
+                />
+              </div>
+              <span className="absolute  w-full flex flex-col text-white gap-2 lg:gap-6 text-center items-center justify-center font-gowun-batang font-bold top-1/3 lg:top-1/5 z-[100]">
+                <span className="text-xs lg:text-[2rem]">특별한 나눔</span>
+                <span>
+                  <img
+                    src={LineImage} alt="line"
+                    className="w-6 lg:w-10"
+                  />
+                </span>
+                <span className="text-xl lg:text-7xl">
+                  함께하는 마음이 만드는 소중한 변화
+                </span>
+                <span className="text-sm lg:text-2xl font-normal">
+                  즐거움과 나눔이 있는 감동의 순간
+                </span>
+              </span>
             </li>
             <li>
               <img
